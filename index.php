@@ -1,5 +1,12 @@
 <?php
 require 'koneksi.php';
+if (empty($_SESSION['pelanggan'])) {
+	echo "<script>
+			alert('Anda belum login, silahkan login terlebih dahulu')
+			location = 'login.php'
+			</script>";
+}
+
 
 $data = [];
 
@@ -16,6 +23,7 @@ if (isset($_GET['cari'])) {
 while($pecah = $ambil->fetch_assoc()){
 	$data[] = $pecah;
 }
+
 
 
 
@@ -43,7 +51,10 @@ while($pecah = $ambil->fetch_assoc()){
 	</form>
 
 	<br>
-
+	<a href="logout.php">Logout</a>
+	<br>
+	<br>
+	<br>
 
 
 	<table border="1" cellpadding="10" cellspacing="0">

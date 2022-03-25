@@ -82,7 +82,7 @@ if (isset($_POST['tambah'])) {
 
 	move_uploaded_file($tmp, "foto_buku/".$namaFiks);
 
-	$conn->query("INSERT INTO buku VALUES(null, '$judul', '$pengarang', '$penerbit', '$namaFiks', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)");
+	$conn->query("INSERT INTO buku VALUES(null, '$judul', '$pengarang', '$penerbit', '$namaFiks', null, null)");
 
 	echo "<script>
 			alert('Data berhasil ditambahkan')
