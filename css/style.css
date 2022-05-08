@@ -251,6 +251,7 @@ table tbody tr:nth-child(odd) {
 table img {
     width: 100px;
     height: 100px;
+    object-fit: cover;
 }
 
 
@@ -459,6 +460,12 @@ main h2 {
         width: 50%;
         transform: translateX(-150%);
     }
+
+
+    form .form-group .input-group button {
+        width: 20%;
+    }
+
 }
 
 
@@ -474,6 +481,10 @@ main h2 {
 
     aside {
         width: 80%;
+    }
+
+    form .form-group .input-group button {
+        width: 25%;
     }
 }
 
@@ -509,5 +520,9 @@ main h2 {
 
     aside .profil {
         display: none;
+    }
+
+    form .form-group .input-group button {
+        width: 30%;
     }
 }
